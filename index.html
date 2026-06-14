@@ -3,289 +3,342 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Daily News - Luxury Fragrance Industry Scandal</title>
+    <title>FRAGRANCE INSIDER - Exclusive Industry Report</title>
     <style>
-        /* Modern & Premium Newspaper Styling */
+        /* Premium Midnight Luxury Theme */
         :root {
-            --bg-color: #fbf9f6;
-            --text-color: #1a1a1a;
-            --border-color: #222222;
-            --accent-color: #8c1d1d;
+            --bg-deep: #0d0d0d;
+            --bg-card: #141414;
+            --gold-primary: #dfc15d;
+            --gold-dim: #bfa343;
+            --text-light: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --border-color: #262626;
         }
 
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Cinzel', 'Didot', 'Georgia', serif;
+            background-color: var(--bg-deep);
+            color: var(--text-light);
             margin: 0;
-            padding: 20px;
-            line-height: 1.6;
+            padding: 40px 20px;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .newspaper-container {
-            max-width: 900px;
+        .main-wrapper {
+            max-width: 1000px;
             margin: 0 auto;
-            background: #ffffff;
-            padding: 40px;
-            border: 1px solid #dcd7cd;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            background: var(--bg-card);
+            padding: 50px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
-        /* Top Header Area */
-        .newspaper-header {
+        /* Luxury Header */
+        .app-header {
             text-align: center;
-            border-bottom: 5px double var(--border-color);
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
         }
 
-        .newspaper-header h1 {
-            font-size: 55px;
-            font-weight: 900;
+        .app-header h1 {
+            font-size: 42px;
+            font-weight: 300;
             text-transform: uppercase;
             margin: 0;
-            letter-spacing: -2px;
-            font-family: 'Times New Roman', serif;
+            letter-spacing: 6px;
+            color: var(--gold-primary);
         }
 
-        .meta-bar {
+        .sub-nav {
             display: flex;
             justify-content: space-between;
-            font-size: 13px;
+            font-size: 11px;
             text-transform: uppercase;
             font-weight: bold;
-            border-top: 1px solid var(--border-color);
-            padding-top: 6px;
-            margin-top: 8px;
-            font-family: 'Arial', sans-serif;
-            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-top: 15px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
         }
 
         /* Article Typography */
         .headline {
-            font-size: 34px;
-            font-weight: bold;
-            line-height: 1.2;
-            margin: 20px 0;
-            color: #000000;
+            font-size: 36px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin: 30px 0;
+            color: #ffffff;
             text-align: center;
+            letter-spacing: 1px;
         }
 
-        .sub-headline {
-            font-size: 18px;
+        .subtitle {
+            font-size: 16px;
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 40px;
             font-style: italic;
-            text-align: center;
-            color: #555;
-            margin-bottom: 30px;
-            border-bottom: 1px dashed #ccc;
-            padding-bottom: 15px;
         }
 
-        /* Two-Column Newspaper Layout */
-        .article-body {
+        /* Elegant Layout Split */
+        .content-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 40px;
+        }
+
+        .text-block {
             text-align: justify;
+            font-size: 15px;
+            color: #e0e0e0;
         }
 
         h3 {
-            font-size: 20px;
-            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            color: var(--accent-color);
+            color: var(--gold-primary);
             margin-top: 0;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 3px;
+            border-bottom: 1px solid var(--gold-dim);
+            padding-bottom: 8px;
         }
 
-        .first-letter::first-letter {
-            font-size: 50px;
+        .drop-cap::first-letter {
+            font-size: 55px;
             float: left;
             font-weight: bold;
-            line-height: 40px;
-            padding-right: 8px;
-            padding-top: 4px;
-            color: var(--accent-color);
+            line-height: 45px;
+            padding-right: 10px;
+            color: var(--gold-primary);
         }
 
-        /* Interactive Image Section */
-        .image-gallery {
+        /* Stunning Interactive Photo Section */
+        .gallery-section {
             grid-column: span 2;
-            background: #fdfdfd;
-            border: 1px solid #e2ded6;
-            padding: 20px;
+            background: #080808;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
             text-align: center;
-            margin: 20px 0;
+            margin: 30px 0;
         }
 
-        .image-wrapper {
+        .gallery-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold-dim);
+            margin-bottom: 20px;
+        }
+
+        .image-flex {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 40px;
             flex-wrap: wrap;
         }
 
-        .perfume-img {
-            max-width: 200px;
-            height: auto;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .bottle-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
 
-        .perfume-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .bottle-card:hover {
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 20px rgba(223, 193, 93, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .perfume-img {
+            max-width: 220px;
+            height: auto;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .image-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            color: var(--text-muted);
         }
 
         .caption {
-            font-size: 13px;
-            color: #555;
+            font-size: 12px;
+            color: var(--text-muted);
             font-style: italic;
-            margin-top: 15px;
+            margin-top: 20px;
         }
 
-        /* Quote Block */
-        .press-quote {
-            background-color: #f9f7f3;
-            border-left: 4px solid var(--accent-color);
-            padding: 15px;
+        /* High-End Quote Callout */
+        .quote-box {
+            background-color: #0b0b0b;
+            border-left: 2px solid var(--gold-primary);
+            padding: 20px;
             font-style: italic;
             margin: 20px 0;
             grid-column: span 2;
+            color: #d5d5d5;
         }
 
-        /* Pop-up Lightbox for Images */
-        .lightbox {
+        /* Lightbox Overlay */
+        .lightbox-modal {
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.95);
             justify-content: center;
             align-items: center;
             z-index: 1000;
         }
 
-        .lightbox img {
-            max-width: 90%;
-            max-height: 80%;
-            border: 3px solid white;
-            border-radius: 4px;
+        .lightbox-modal img {
+            max-width: 85%;
+            max-height: 85%;
+            border: 1px solid var(--gold-primary);
+            box-shadow: 0 0 30px rgba(223, 193, 93, 0.3);
         }
 
-        /* Footer & Disclaimer */
+        /* Premium Footer */
         .footer {
-            margin-top: 40px;
+            margin-top: 50px;
             border-top: 1px solid var(--border-color);
-            padding-top: 20px;
+            padding-top: 30px;
             text-align: center;
-            font-family: 'Arial', sans-serif;
-            font-size: 12px;
-            color: #777;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 1px;
         }
 
-        .disclaimer-btn {
+        .disclaimer-link {
             background: none;
             border: none;
-            color: var(--accent-color);
+            color: var(--gold-primary);
             text-decoration: underline;
             cursor: pointer;
-            font-weight: bold;
+            font-size: 11px;
+            letter-spacing: 1px;
         }
 
-        @media (max-width: 700px) {
-            .article-body { grid-template-columns: 1fr; }
-            .newspaper-header h1 { font-size: 38px; }
+        ul {
+            padding-left: 20px;
+            color: #e0e0e0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 750px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .app-header h1 { font-size: 28px; }
+            .main-wrapper { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
-<div class="newspaper-container">
-    <!-- Header Block -->
-    <header class="newspaper-header">
-        <h1>THE DAILY NEWS</h1>
-        <div class="meta-bar">
-            <span>Issue No. 452</span>
-            <span>PARIS, TUESDAY, JUNE 14, 2026</span>
-            <span>$2.50</span>
+<div class="main-wrapper">
+    <!-- Sophisticated Brand Header -->
+    <header class="app-header">
+        <h1>FRAGRANCE INSIDER</h1>
+        <div class="sub-nav">
+            <span>GLOBAL EDITION</span>
+            <span>PARIS — JUNE 14, 2026</span>
+            <span>DOSSIER N&deg; 7</span>
         </div>
     </header>
 
-    <!-- Headlines -->
-    <h2 class="headline">MASSIVE PERFUME WAR ERUPTS OVER DESIGN AND FORMULA COPY SCANDAL</h2>
-    <div class="sub-headline">French luxury titan By Kilian files a multimillion-dollar lawsuit against UAE-based Lattafa Perfumes.</div>
+    <!-- Headline -->
+    <h2 class="headline">THE ANGELS' SHARE SCANDAL: BY KILIAN INITIATES MULTIMILLION-DOLLAR LEGAL ACTION</h2>
+    <div class="subtitle">An in-depth look into the design and chemical structure dispute shaking the luxury perfume markets.</div>
 
-    <!-- Main Content Grid -->
-    <main class="article-body">
-        <div>
-            <h3>The Legal Battle</h3>
-            <p class="first-letter">A big perfume war started yesterday between two famous fragrance brands[span_0](start_span)[span_0](end_span). The luxury French brand <strong>By Kilian</strong> is suing the Dubai-based brand <strong>Lattafa</strong> because of a massive design and formula copy scandal[span_1](start_span)[span_1](end_span). Industry experts say this could change the entire future of alternative perfumery.</p>
+    <!-- Main Content Layout -->
+    <main class="content-grid">
+        <div class="text-block">
+            <h3>The Industry Conflict</h3>
+            <p class="drop-cap">A big perfume war started yesterday between two famous fragrance brands[span_0](start_span)[span_0](end_span). The luxury French brand <strong>By Kilian</strong> is suing the Dubai-based brand <strong>Lattafa</strong> because of a massive design and formula copy scandal[span_1](start_span)[span_1](end_span). Legal experts note that this case marks a critical turning point in luxury intellectual property rights.</p>
             
-            <h3>The Bottle Copy Problem</h3>
-            <p>By Kilian says that Lattafa completely copied the famous bottle design of their best-selling perfume, <em>Angels' Share</em>[span_2](start_span)[span_2](end_span). The founder, Kilian Hennessy, designed the Angels' Share bottle to look like a luxury, heavy crystal glass[span_3](start_span)[span_3](end_span). It has deep lines on the glass and a very heavy, clear plastic cap[span_4](start_span)[span_4](end_span). Lattafa released a perfume called <em>Khamrah</em> in 2022, and the design is almost identical[span_5](start_span)[span_5](end_span).</p>
+            <h3>The Design Infringement</h3>
+            <p>By Kilian says that Lattafa completely copied the famous bottle design of their best-selling perfume, <em>Angels' Share</em>[span_2](start_span)[span_2](end_span). The founder, Kilian Hennessy, designed the Angels' Share bottle to look like a luxury, heavy crystal glass[span_3](start_span)[span_3](end_span). It features deep lines on the glass and a very heavy, clear plastic cap[span_4](start_span)[span_4](end_span). Lattafa released a perfume called <em>Khamrah</em> in 2022, and the design is almost identical[span_5](start_span)[span_5](end_span).</p>
         </div>
 
-        <div>
-            <h3>Side-by-Side Analysis</h3>
+        <div class="text-block">
+            <h3>The Aesthetic Evaluation</h3>
             <p>If you put the two bottles side by side, you can see these copies clearly[span_6](start_span)[span_6](end_span):</p>
             <ul>
-                <li>Both bottles are square and made of very heavy glass[span_7](start_span)[span_7](end_span).</li>
-                <li>They both have the same crystal-cut diamond patterns on the sides[span_8](start_span)[span_8](end_span).</li>
-                <li>The caps look like large, clear ice cubes on top of the bottles[span_9](start_span)[span_9](end_span).</li>
+                <li>Both bottles are square and crafted from very heavy glass architectural elements[span_7](start_span)[span_7](end_span).</li>
+                <li>They both feature the same crystal-cut diamond patterns on the side walls[span_8](start_span)[span_8](end_span).</li>
+                <li>The caps look like large, clear ice cubes sitting on top of the structural frames[span_9](start_span)[span_9](end_span).</li>
             </ul>
-            <p>"This is not a coincidence," a representative from By Kilian said yesterday during a press conference[span_10](start_span)[span_10](end_span). "They wanted their cheap perfume to look exactly like our luxury product so they could sell millions of bottles easily.[span_11](start_span)"[span_11](end_span)</p>
+            <p>"This is not a coincidence," a senior representative from By Kilian stated earlier today[span_10](start_span)[span_10](end_span). "They wanted their cheap perfume to look exactly like our luxury product so they could sell millions of bottles easily.[span_11](start_span)"[span_11](end_span)</p>
         </div>
 
-        <!-- Interactive Photo Gallery -->
-        <section class="image-gallery">
-            <div class="image-wrapper">
-                <!-- Klasöründeki resim isimlerini angels.jpg ve khamrah.jpg yaparsan otomatik çeker -->
-                <img src="angels.jpg" alt="By Kilian Angels' Share" class="perfume-img" onclick="openLightbox(this.src)">
-                <img src="khamrah.jpg" alt="Lattafa Khamrah" class="perfume-img" onclick="openLightbox(this.src)">
+        <!-- Premium Visual Exhibition Gallery -->
+        <section class="gallery-section">
+            <div class="gallery-title">Case Exhibit A: Structural Design Comparison</div>
+            <div class="image-flex">
+                <div class="bottle-card">
+                    <img src="angels.jpg" alt="By Kilian Angels' Share" class="perfume-img" onclick="openImage(this.src)">
+                    <div class="image-label">Angels' Share (French Luxury)</div>
+                </div>
+                <div class="bottle-card">
+                    <img src="khamrah.jpg" alt="Lattafa Khamrah" class="perfume-img" onclick="openImage(this.src)">
+                    <div class="image-label">Khamrah (UAE Alternative)</div>
+                </div>
             </div>
-            <div class="caption">Figure 1: Evidence submitted to the Paris court showing the structural similarities between Angels' Share (Left) and Khamrah (Right). Click on images to expand.</div>
+            <div class="caption">Figure 1.1: Official comparison images submitted to the Paris High Court detailing the geometric patterns and cap aesthetics. Click images for high-resolution inspection.</div>
         </section>
 
-        <div>
-            <h3>The Secret Formula Leak</h3>
+        <div class="text-block">
+            <h3>The Chemical Sourcing Leak</h3>
             <p>The scandal is not only about the bottles[span_12](start_span)[span_12](end_span). By Kilian also claims that a worker from their secret laboratory stole the formula of Angels' Share and gave it to Lattafa[span_13](start_span)[span_13](end_span). <em>Angels' Share</em> uses a very special and expensive mix of cognac oil, cinnamon, and oakwood[span_14](start_span)[span_14](end_span).</p>
-            <p>Scientists tested both perfumes in a lab and found out that the chemical match inside the liquid is more than 95%[span_15](start_span)[span_15](end_span). However, there is a huge price difference[span_16](start_span)[span_16](end_span). Angels' Share is a luxury perfume and costs $245, but Lattafa sells Khamrah for only $40[span_17](start_span)[span_17](end_span). Because of this, millions of people stopped buying the expensive version and started buying Khamrah[span_18](start_span)[span_18](end_span).</p>
+            <p>Scientists tested both perfumes in a lab and found out that the chemical match inside the liquid is more than 95%[span_15](start_span)[span_15](end_span).</p>
         </div>
 
-        <div>
-            <h3>Lattafa Denies Claims</h3>
-            <p>Lattafa Perfumes made a statement today and said they are innocent[span_19](start_span)[span_19](end_span). "We did not steal anything[span_20](start_span)[span_20](end_span). Our bottle design is inspired by traditional Arabic crystal glasses, not France[span_21](start_span)[span_21](end_span). Khamrah is our own creation," the company said[span_22](start_span)[span_22](end_span).</p>
-            <p>The court case will continue next month in Paris[span_23](start_span)[span_23](end_span). If Kilian wins the case, Lattafa will have to stop selling Khamrah worldwide and destroy all the bottles in their factories[span_24](start_span)[span_24](end_span).</p>
+        <div class="text-block">
+            <h3>Market Impact & Resolution</h3>
+            <p>However, there is a huge price difference[span_16](start_span)[span_16](end_span). Angels' Share is a luxury perfume and costs $245, but Lattafa sells Khamrah for only $40[span_17](start_span)[span_17](end_span). Because of this, millions of people stopped buying the expensive version and started buying Khamrah[span_18](start_span)[span_18](end_span).</p>
+            <p>Lattafa Perfumes made a counter-statement today and said they are innocent[span_19](start_span)[span_19](end_span). "We did not steal anything[span_20](start_span)[span_20](end_span). Our bottle design is inspired by traditional Arabic crystal glasses, not France[span_21](start_span)[span_21](end_span). Khamrah is our own creation," the company said[span_22](start_span)[span_22](end_span). The court case will continue next month in Paris[span_23](start_span)[span_23](end_span).</p>
         </div>
 
-        <div class="press-quote">
-            <strong>Editor's Note:</strong> Retailers report that global stocks of Khamrah are running low as consumers rush to buy the fragrance before a potential worldwide ban.
+        <div class="quote-box">
+            <strong>Corporate Notice:</strong> If By Kilian wins the legal case, Lattafa will be legally forced to stop selling Khamrah worldwide and destroy all remaining inventory in their factories[span_24](start_span)[span_24](end_span).
         </div>
     </main>
 
-    <!-- Footer Area -->
+    <!-- Footer Section with Hidden Disclaimer -->
     <footer class="footer">
-        <p>&copy; 2026 The Daily News Media Group. All rights reserved.</p>
-        <p>Educational School Project. <button class="disclaimer-btn" onclick="alert('Disclaimer: This article is a work of fiction created entirely for a 7th-grade English school project. The events, court claims, and leaks described here are not real. There is no actual legal war or formula theft between By Kilian and Lattafa Perfumes.')">Click here to view legal disclaimer.</button></p>
+        <p>&copy; 2026 FRAGRANCE INSIDER DIGITAL MEDIA. ALL RIGHTS RESERVED.</p>
+        <p>Educational Academic Project. <button class="disclaimer-link" onclick="toggleDisclaimer()">View Legal Status Info</button></p>
     </footer>
 </div>
 
-<!-- Lightbox Feature -->
-<div id="lightboxModal" class="lightbox" onclick="closeLightbox()">
-    <img id="lightboxImg" src="" alt="Expanded View">
+<!-- Modal Lightbox -->
+<div id="imageModal" class="lightbox-modal" onclick="closeImage()">
+    <img id="modalTargetImg" src="" alt="Premium View">
 </div>
 
 <script>
-    // Simple JavaScript to make the images interactive
-    function openLightbox(src) {
-        document.getElementById('lightboxImg').src = src;
-        document.getElementById('lightboxModal').style.display = 'flex';
+    function openImage(src) {
+        document.getElementById('modalTargetImg').src = src;
+        document.getElementById('imageModal').style.display = 'flex';
     }
-    function closeLightbox() {
-        document.getElementById('lightboxModal').style.display = 'none';
+    function closeImage() {
+        document.getElementById('imageModal').style.display = 'none';
+    }
+    function toggleDisclaimer() {
+        alert("Disclaimer: This application is a purely fictional creative writing assignment created for a 7th-grade school project. The legal claims, chemical matches, and events described above are not real. There are no actual legal disputes or formula leaks between By Kilian and Lattafa Perfumes.");
     }
 </script>
 
