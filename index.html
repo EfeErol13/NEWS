@@ -116,7 +116,7 @@
             color: var(--gold-primary);
         }
 
-        /* Premium Fixed Image Section */
+        /* FIXED: Perfectly Aligned Image Section */
         .gallery-section {
             grid-column: span 2;
             background: #080808;
@@ -132,13 +132,14 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--gold-dim);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .image-flex {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            align-items: stretch; /* Cards will have the exact same height */
+            gap: 30px;
             flex-wrap: wrap;
         }
 
@@ -151,7 +152,9 @@
             width: 220px;
             display: flex;
             flex-direction: column;
+            justify-content:间-between; /* Keeps image on top, label on bottom */
             align-items: center;
+            box-sizing: border-box;
         }
 
         .bottle-card:hover {
@@ -160,12 +163,20 @@
             transform: translateY(-5px);
         }
 
-        .perfume-img {
+        .img-box {
             width: 100%;
-            height: auto;
+            min-height: 180px; /* Fixes height even if images fail to load */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .perfume-img {
+            max-width: 100%;
+            max-height: 200px;
+            object-fit: contain;
             border-radius: 6px;
             cursor: pointer;
-            border: 1px solid #222;
         }
 
         .image-label {
@@ -175,6 +186,7 @@
             margin-top: 15px;
             color: var(--text-light);
             font-weight: bold;
+            text-align: center;
         }
 
         .caption {
@@ -287,20 +299,24 @@
             <p>"This is not a coincidence," a senior representative from By Kilian stated earlier today. "They wanted their cheap perfume to look exactly like our luxury product so they could sell millions of bottles easily."</p>
         </div>
 
-        <!-- Premium Visual Exhibition Gallery with Permanent Embedded Images -->
+        <!-- Premium Visual Exhibition Gallery -->
         <section class="gallery-section">
             <div class="gallery-title">Case Exhibit A: Structural Design Comparison</div>
             <div class="image-flex">
                 
-                <!-- Bottle 1: Angels Share (Permanently Embedded) -->
+                <!-- Bottle 1: Angels Share -->
                 <div class="bottle-card">
-                    <img src=angels.jpg
+                    <div class="img-box">
+                        <img src="angels.jpg" alt="By Kilian Angels' Share" class="perfume-img" onclick="openImage(this.src)">
+                    </div>
                     <div class="image-label">Angels' Share</div>
                 </div>
 
-                <!-- Bottle 2: Khamrah (Permanently Embedded) -->
+                <!-- Bottle 2: Khamrah -->
                 <div class="bottle-card">
-                    <img src=khamrah.jpg
+                    <div class="img-box">
+                        <img src="khamrah.jpg" alt="Lattafa Khamrah" class="perfume-img" onclick="openImage(this.src)">
+                    </div>
                     <div class="image-label">Khamrah</div>
                 </div>
 
@@ -338,7 +354,6 @@
 </div>
 
 <script>
-    // Lightbox Features
     function openImage(src) {
         document.getElementById('modalTargetImg').src = src;
         document.getElementById('imageModal').style.display = 'flex';
