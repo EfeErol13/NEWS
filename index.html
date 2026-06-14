@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily News - Luxury Fragrance Industry Scandal</title>
+    <style>
+        /* Modern & Premium Newspaper Styling */
+        :root {
+            --bg-color: #fbf9f6;
+            --text-color: #1a1a1a;
+            --border-color: #222222;
+            --accent-color: #8c1d1d;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .newspaper-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border: 1px solid #dcd7cd;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        /* Top Header Area */
+        .newspaper-header {
+            text-align: center;
+            border-bottom: 5px double var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .newspaper-header h1 {
+            font-size: 55px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: -2px;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .meta-bar {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-top: 1px solid var(--border-color);
+            padding-top: 6px;
+            margin-top: 8px;
+            font-family: 'Arial', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        /* Article Typography */
+        .headline {
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 20px 0;
+            color: #000000;
+            text-align: center;
+        }
+
+        .sub-headline {
+            font-size: 18px;
+            font-style: italic;
+            text-align: center;
+            color: #555;
+            margin-bottom: 30px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 15px;
+        }
+
+        /* Two-Column Newspaper Layout */
+        .article-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: justify;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-family: 'Arial', sans-serif;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 3px;
+        }
+
+        .first-letter::first-letter {
+            font-size: 50px;
+            float: left;
+            font-weight: bold;
+            line-height: 40px;
+            padding-right: 8px;
+            padding-top: 4px;
+            color: var(--accent-color);
+        }
+
+        /* Interactive Image Section */
+        .image-gallery {
+            grid-column: span 2;
+            background: #fdfdfd;
+            border: 1px solid #e2ded6;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .perfume-img {
+            max-width: 200px;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .perfume-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .caption {
+            font-size: 13px;
+            color: #555;
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        /* Quote Block */
+        .press-quote {
+            background-color: #f9f7f3;
+            border-left: 4px solid var(--accent-color);
+            padding: 15px;
+            font-style: italic;
+            margin: 20px 0;
+            grid-column: span 2;
+        }
+
+        /* Pop-up Lightbox for Images */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border: 3px solid white;
+            border-radius: 4px;
+        }
+
+        /* Footer & Disclaimer */
+        .footer {
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .disclaimer-btn {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            .article-body { grid-template-columns: 1fr; }
+            .newspaper-header h1 { font-size: 38px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="newspaper-container">
+    <!-- Header Block -->
+    <header class="newspaper-header">
+        <h1>THE DAILY NEWS</h1>
+        <div class="meta-bar">
+            <span>Issue No. 452</span>
+            <span>PARIS, TUESDAY, JUNE 14, 2026</span>
+            <span>$2.50</span>
+        </div>
+    </header>
+
+    <!-- Headlines -->
+    <h2 class="headline">MASSIVE PERFUME WAR ERUPTS OVER DESIGN AND FORMULA COPY SCANDAL</h2>
+    <div class="sub-headline">French luxury titan By Kilian files a multimillion-dollar lawsuit against UAE-based Lattafa Perfumes.</div>
+
+    <!-- Main Content Grid -->
+    <main class="article-body">
+        <div>
+            <h3>The Legal Battle</h3>
+            <p class="first-letter">A big perfume war started yesterday between two famous fragrance brands[span_0](start_span)[span_0](end_span). The luxury French brand <strong>By Kilian</strong> is suing the Dubai-based brand <strong>Lattafa</strong> because of a massive design and formula copy scandal[span_1](start_span)[span_1](end_span). Industry experts say this could change the entire future of alternative perfumery.</p>
+            
+            <h3>The Bottle Copy Problem</h3>
+            <p>By Kilian says that Lattafa completely copied the famous bottle design of their best-selling perfume, <em>Angels' Share</em>[span_2](start_span)[span_2](end_span). The founder, Kilian Hennessy, designed the Angels' Share bottle to look like a luxury, heavy crystal glass[span_3](start_span)[span_3](end_span). It has deep lines on the glass and a very heavy, clear plastic cap[span_4](start_span)[span_4](end_span). Lattafa released a perfume called <em>Khamrah</em> in 2022, and the design is almost identical[span_5](start_span)[span_5](end_span).</p>
+        </div>
+
+        <div>
+            <h3>Side-by-Side Analysis</h3>
+            <p>If you put the two bottles side by side, you can see these copies clearly[span_6](start_span)[span_6](end_span):</p>
+            <ul>
+                <li>Both bottles are square and made of very heavy glass[span_7](start_span)[span_7](end_span).</li>
+                <li>They both have the same crystal-cut diamond patterns on the sides[span_8](start_span)[span_8](end_span).</li>
+                <li>The caps look like large, clear ice cubes on top of the bottles[span_9](start_span)[span_9](end_span).</li>
+            </ul>
+            <p>"This is not a coincidence," a representative from By Kilian said yesterday during a press conference[span_10](start_span)[span_10](end_span). "They wanted their cheap perfume to look exactly like our luxury product so they could sell millions of bottles easily.[span_11](start_span)"[span_11](end_span)</p>
+        </div>
+
+        <!-- Interactive Photo Gallery -->
+        <section class="image-gallery">
+            <div class="image-wrapper">
+                <!-- Klasöründeki resim isimlerini angels.jpg ve khamrah.jpg yaparsan otomatik çeker -->
+                <img src="angels.jpg" alt="By Kilian Angels' Share" class="perfume-img" onclick="openLightbox(this.src)">
+                <img src="khamrah.jpg" alt="Lattafa Khamrah" class="perfume-img" onclick="openLightbox(this.src)">
+            </div>
+            <div class="caption">Figure 1: Evidence submitted to the Paris court showing the structural similarities between Angels' Share (Left) and Khamrah (Right). Click on images to expand.</div>
+        </section>
+
+        <div>
+            <h3>The Secret Formula Leak</h3>
+            <p>The scandal is not only about the bottles[span_12](start_span)[span_12](end_span). By Kilian also claims that a worker from their secret laboratory stole the formula of Angels' Share and gave it to Lattafa[span_13](start_span)[span_13](end_span). <em>Angels' Share</em> uses a very special and expensive mix of cognac oil, cinnamon, and oakwood[span_14](start_span)[span_14](end_span).</p>
+            <p>Scientists tested both perfumes in a lab and found out that the chemical match inside the liquid is more than 95%[span_15](start_span)[span_15](end_span). However, there is a huge price difference[span_16](start_span)[span_16](end_span). Angels' Share is a luxury perfume and costs $245, but Lattafa sells Khamrah for only $40[span_17](start_span)[span_17](end_span). Because of this, millions of people stopped buying the expensive version and started buying Khamrah[span_18](start_span)[span_18](end_span).</p>
+        </div>
+
+        <div>
+            <h3>Lattafa Denies Claims</h3>
+            <p>Lattafa Perfumes made a statement today and said they are innocent[span_19](start_span)[span_19](end_span). "We did not steal anything[span_20](start_span)[span_20](end_span). Our bottle design is inspired by traditional Arabic crystal glasses, not France[span_21](start_span)[span_21](end_span). Khamrah is our own creation," the company said[span_22](start_span)[span_22](end_span).</p>
+            <p>The court case will continue next month in Paris[span_23](start_span)[span_23](end_span). If Kilian wins the case, Lattafa will have to stop selling Khamrah worldwide and destroy all the bottles in their factories[span_24](start_span)[span_24](end_span).</p>
+        </div>
+
+        <div class="press-quote">
+            <strong>Editor's Note:</strong> Retailers report that global stocks of Khamrah are running low as consumers rush to buy the fragrance before a potential worldwide ban.
+        </div>
+    </main>
+
+    <!-- Footer Area -->
+    <footer class="footer">
+        <p>&copy; 2026 The Daily News Media Group. All rights reserved.</p>
+        <p>Educational School Project. <button class="disclaimer-btn" onclick="alert('Disclaimer: This article is a work of fiction created entirely for a 7th-grade English school project. The events, court claims, and leaks described here are not real. There is no actual legal war or formula theft between By Kilian and Lattafa Perfumes.')">Click here to view legal disclaimer.</button></p>
+    </footer>
+</div>
+
+<!-- Lightbox Feature -->
+<div id="lightboxModal" class="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg" src="" alt="Expanded View">
+</div>
+
+<script>
+    // Simple JavaScript to make the images interactive
+    function openLightbox(src) {
+        document.getElementById('lightboxImg').src = src;
+        document.getElementById('lightboxModal').style.display = 'flex';
+    }
+    function closeLightbox() {
+        document.getElementById('lightboxModal').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
