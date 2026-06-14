@@ -116,7 +116,7 @@
             color: var(--gold-primary);
         }
 
-        /* Stunning Image Upload Section */
+        /* Premium Fixed Image Section */
         .gallery-section {
             grid-column: span 2;
             background: #080808;
@@ -148,63 +148,31 @@
             padding: 20px;
             border-radius: 8px;
             transition: all 0.3s ease;
-            width: 240px;
+            width: 220px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
         }
 
         .bottle-card:hover {
             border-color: var(--gold-primary);
             box-shadow: 0 0 20px rgba(223, 193, 93, 0.2);
+            transform: translateY(-5px);
         }
 
-        .image-container-box {
-            width: 200px;
-            height: 250px;
-            border: 2px dashed #333;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: #111;
-            margin-bottom: 15px;
-            position: relative;
-        }
-
-        .uploaded-img {
+        .perfume-img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: none;
+            height: auto;
+            border-radius: 6px;
             cursor: pointer;
-        }
-
-        .upload-label {
-            font-size: 12px;
-            color: var(--gold-primary);
-            cursor: pointer;
-            border: 1px solid var(--gold-dim);
-            padding: 6px 12px;
-            border-radius: 4px;
-            transition: background 0.2s;
-        }
-
-        .upload-label:hover {
-            background: rgba(223, 193, 93, 0.1);
-        }
-
-        .file-input {
-            display: none;
+            border: 1px solid #222;
         }
 
         .image-label {
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-top: 5px;
+            margin-top: 15px;
             color: var(--text-light);
             font-weight: bold;
         }
@@ -319,35 +287,25 @@
             <p>"This is not a coincidence," a senior representative from By Kilian stated earlier today. "They wanted their cheap perfume to look exactly like our luxury product so they could sell millions of bottles easily."</p>
         </div>
 
-        <!-- Premium Visual Exhibition Gallery with Live Upload System -->
+        <!-- Premium Visual Exhibition Gallery with Permanent Embedded Images -->
         <section class="gallery-section">
             <div class="gallery-title">Case Exhibit A: Structural Design Comparison</div>
             <div class="image-flex">
                 
-                <!-- Bottle 1: Angels Share -->
+                <!-- Bottle 1: Angels Share (Permanently Embedded) -->
                 <div class="bottle-card">
-                    <div class="image-container-box">
-                        <span id="text1" style="color: #444; font-size: 12px;">No Image Selected</span>
-                        <img id="img1" src="" alt="By Kilian Angels' Share" class="uploaded-img" onclick="openImage(this.src)">
-                    </div>
-                    <label for="input1" class="upload-label">Select Bottle 1</label>
-                    <input type="file" id="input1" class="file-input" accept="image/*" onchange="previewImage(this, 'img1', 'text1')">
+                    <img src=angels.jpg
                     <div class="image-label">Angels' Share</div>
                 </div>
 
-                <!-- Bottle 2: Khamrah -->
+                <!-- Bottle 2: Khamrah (Permanently Embedded) -->
                 <div class="bottle-card">
-                    <div class="image-container-box">
-                        <span id="text2" style="color: #444; font-size: 12px;">No Image Selected</span>
-                        <img id="img2" src="" alt="Lattafa Khamrah" class="uploaded-img" onclick="openImage(this.src)">
-                    </div>
-                    <label for="input2" class="upload-label">Select Bottle 2</label>
-                    <input type="file" id="input2" class="file-input" accept="image/*" onchange="previewImage(this, 'img2', 'text2')">
+                    <img src=khamrah.jpg
                     <div class="image-label">Khamrah</div>
                 </div>
 
             </div>
-            <div class="caption">Figure 1.1: Official comparison images submitted to the Paris High Court detailing the geometric patterns and cap aesthetics. Click uploaded images to expand.</div>
+            <div class="caption">Figure 1.1: Official comparison images submitted to the Paris High Court detailing the geometric patterns and cap aesthetics. Click images for high-resolution inspection.</div>
         </section>
 
         <div class="text-block">
@@ -380,21 +338,6 @@
 </div>
 
 <script>
-    // Image Upload Preview Script
-    function previewImage(input, imgId, textId) {
-        const file = input.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const imgElement = document.getElementById(imgId);
-                imgElement.src = e.target.result;
-                imgElement.style.display = 'block';
-                document.getElementById(textId).style.display = 'none';
-            }
-            reader.readAsDataURL(file);
-        }
-    }
-
     // Lightbox Features
     function openImage(src) {
         document.getElementById('modalTargetImg').src = src;
